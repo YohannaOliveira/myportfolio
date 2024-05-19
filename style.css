@@ -1,3 +1,4 @@
+/* Style geral */
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +22,15 @@ h2.titulo {
     display: flex;
 }
 
+/* Imagem */
+
 .logo img {
     width: 80px;
     height: 80px;
     padding: 5px;
 }
+
+/* Navbar*/
 
 nav {
     display: flex;
@@ -64,39 +69,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-@media (max-width: 1200px) {
-    .flex {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background-color: #003840;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.3s ease;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 50px 0;
-    }
-
-    nav ul li a {
-        font-size: 23px;
-    }
-
-    nav ul li a .active,
-    nav ul li a:hover {
-        background: none;
-        color: #dd7805ea;
-    }
-}
+/* Topo/sobre mim */
 
 section.topo {
     padding: 40px 4%;
@@ -125,6 +98,8 @@ section.topo .flex {
     width: auto;
     height: auto;
 }
+
+/* Skills */
 
 section.skills {
     align-items: center;
@@ -162,6 +137,8 @@ section.skills .skills-icons img {
     max-width: 100%;
     height: auto;
 }
+
+/* Projetos */
 
 section.projetos {
     padding: 80px 4%;
@@ -213,15 +190,66 @@ a:hover {
     transform: scale(1.20);
 }
 
+/* Contato */
+
 section.contato {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
 section.contato .flex {
+    flex-direction: column;
     gap: 60px;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Contato - Formulário */
+
+form {
+    padding: 40px;
+    max-width: 600px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 250px;
+}
+
+form .btn-enviar {
+    margin-top: 15px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #dd7805ea;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #dd7805ea;
+    transform: scale(1.05);
+}
+
+/* Contato - Redes */
 
 section.contato .btn-contato button {
     width: 100px;
@@ -237,6 +265,8 @@ section.contato .btn-contato button {
 section.contato .btn-contato button:hover {
     transform: scale(1.05);
 }
+
+/* Rodapé */
 
 footer {
     padding: 30px 4%;
@@ -260,9 +290,15 @@ footer .line-footer p {
     border-top: 2px solid #dd7805ea;
 }
 
+/* Responsividade */
+
 @media screen and (max-width: 1020px) {
     .flex {
         flex-direction: column;
+    }
+
+    nav ul li a {
+        font-size: 14px;
     }
 
     h2.titulo {
